@@ -10,9 +10,10 @@ namespace SpaUserControl.Domain.Models
 {
     public class User
     {
-        #region Construtor
+        #region Ctor
         public User(string name, string email)
         {
+            this.Id = Guid.NewGuid();
             this.Name = name;
 
             this.Email = email;
@@ -22,7 +23,7 @@ namespace SpaUserControl.Domain.Models
 
         #region Properties
         //Private set para que somente a classe user possa modificar seus atributos.
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
 
         public string Name { get; private set; }
 
