@@ -61,6 +61,15 @@ namespace SpaUserControl.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email is Invalid.
+        /// </summary>
+        public static string InvalidEmail {
+            get {
+                return ResourceManager.GetString("InvalidEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Password.
         /// </summary>
         public static string InvalidPassword {
@@ -75,6 +84,15 @@ namespace SpaUserControl.Common.Resources {
         public static string InvalidPasswordConfirmation {
             get {
                 return ResourceManager.GetString("InvalidPasswordConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Name is Invalid.
+        /// </summary>
+        public static string InvalidUserName {
+            get {
+                return ResourceManager.GetString("InvalidUserName", resourceCulture);
             }
         }
         

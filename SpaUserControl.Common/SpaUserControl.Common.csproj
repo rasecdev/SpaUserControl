@@ -47,6 +47,7 @@
       <DependentUpon>Errors.resx</DependentUpon>
     </Compile>
     <Compile Include="Validacion\AssertionConcern.cs" />
+    <Compile Include="Validacion\EmailAssertionConcern.cs" />
     <Compile Include="Validacion\PasswordAssertionConcern.cs" />
   </ItemGroup>
   <ItemGroup />
