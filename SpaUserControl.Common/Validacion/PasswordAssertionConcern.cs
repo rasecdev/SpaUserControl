@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaUserControl.Common.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace SpaUserControl.Common.Validacion
     {
         public static void AssertIsValid(string password)
         {
-            AssertionConcern.AssertArgumentNotNull(password, "");
+            AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
         }
 
         public static string Encrypt(string password)
