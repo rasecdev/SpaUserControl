@@ -10,6 +10,7 @@ namespace SpaUserControl.Domain.Models
 {
     public class User
     {
+        #region Construtor
         public User(string name, string email)
         {
             this.Name = name;
@@ -17,6 +18,9 @@ namespace SpaUserControl.Domain.Models
             this.Email = email;
                 
         }
+        #endregion
+
+        #region Properties
         //Private set para que somente a classe user possa modificar seus atributos.
         public int Id { get; private set; }
 
@@ -25,7 +29,9 @@ namespace SpaUserControl.Domain.Models
         public string Email { get; private set; }
 
         public string Password { get; private set; }
+        #endregion
 
+        #region Methods
         public void  SetPassword(string password, string confirmPassword)
         {
             AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
@@ -61,5 +67,6 @@ namespace SpaUserControl.Domain.Models
             PasswordAssertionConcern.AssertIsValid(this.Password);
 
         }
+        #endregion
     }
 }
