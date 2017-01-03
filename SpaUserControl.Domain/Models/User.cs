@@ -11,6 +11,10 @@ namespace SpaUserControl.Domain.Models
     public class User
     {
         #region Ctor
+
+        //Construtor para o Entity FrameWork, protected para continuar com a segurança para modificação dos atributos.
+        protected User() { }
+
         public User(string name, string email)
         {
             this.Id = Guid.NewGuid();
@@ -61,7 +65,7 @@ namespace SpaUserControl.Domain.Models
 
         public void Validate()
         {
-            AssertionConcern.AssertArgumentLength(this.Name, 3, 250, Errors.InvalidUserName);
+            AssertionConcern.AssertArgumentLength(this.Name, 3, 60, Errors.InvalidUserName);
 
             EmailAssertionConcern.AssertIsValid(this.Email);
 
