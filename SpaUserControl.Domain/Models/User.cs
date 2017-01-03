@@ -34,7 +34,7 @@ namespace SpaUserControl.Domain.Models
 
             AssertionConcern.AssertArgumentLength(password, 6, 20, "Senha Inválida!");
 
-            this.Password = password;
+            this.Password = PasswordAssertionConcern.Encrypt(password);
         }
     }
 }
