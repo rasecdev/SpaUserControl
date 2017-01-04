@@ -66,7 +66,7 @@ namespace SpaUserControl.Common.Validacion
 
         public static void AssertArgumentNotEquals(object object1, object object2, string message)
         {
-            if (object1.Equals(object2))
+            if (!object1.Equals(object2))
             {
                 throw new InvalidOperationException(message);
             }

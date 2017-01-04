@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace SpaUserControl.Domain.Contracts.Repositories
 {
-    public interface IUserRepository
+    //Herdar do Idisposable para fechar a conexão com o banco, após uma requisição.
+    public interface IUserRepository : IDisposable
     {
         User Get(string email);
 
