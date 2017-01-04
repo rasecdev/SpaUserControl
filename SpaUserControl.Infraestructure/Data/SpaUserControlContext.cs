@@ -1,4 +1,5 @@
 ﻿using SpaUserControl.Domain.Models;
+using SpaUserControl.Infraestructure.Data.Map;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -17,5 +18,11 @@ namespace SpaUserControl.Infraestructure.Data
         }
 
         public DbSet<User> Users { get; set; }
+
+        //Quando for criado um novo User o On ModelCreating irá usar as configurações do UserMap.
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new UserMap());
+        }
     }
 }
