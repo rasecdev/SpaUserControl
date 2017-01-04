@@ -14,7 +14,12 @@ namespace SpaUserControl.Infraestructure.Data
         public SpaUserControlContext()
             : base("SpaUserControlConnectionString")
         {
+            //Como a base está sendo criada para trazer somente o que se precisa(classe com poucos atributos), não é 
+            //necessário o LazyLoad.
+            Configuration.LazyLoadingEnabled = false;
 
+            //O Json não consegue serializar um proxy, somente uma instância concreta, logo desabilitar o Proxy.
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<User> Users { get; set; }
