@@ -18,7 +18,7 @@ namespace SpaUserControl.Infraestructure.Repositories
         {
             this._context = context;
         }
-        //pattern and pratice
+        
         public User Get(Guid id)
         {
             return _context.Users.Where(x => x.Id == id).FirstOrDefault();

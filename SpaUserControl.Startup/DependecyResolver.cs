@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using SpaUserControl.Domain.Contracts.Repositories;
+using SpaUserControl.Infraestructure.Data;
+using SpaUserControl.Infraestructure.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +12,11 @@ namespace SpaUserControl.Startup
 {
     class DependecyResolver
     {
+        //Usando o Unity (pattern and practices da Microsoft) para a resolução de dependência.
+        public static void Resolve(UnityContainer container)
+        {
+            container.RegisterType<SpaUserControlContext, SpaUserControlContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
+        }
     }
 }
