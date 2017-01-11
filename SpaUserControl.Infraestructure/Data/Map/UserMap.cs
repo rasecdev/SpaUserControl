@@ -32,7 +32,7 @@ namespace SpaUserControl.Infraestructure.Data.Map
 
             Property(x => x.Password)
                 .HasMaxLength(32)
-                .IsFixedLength(); //Encriptada te`rá 32 caracteres independente do tamnanho da senha.
+                .IsFixedLength(); //Encriptada terá 32 caracteres independente do tamnanho da senha.
         }
     }
 }

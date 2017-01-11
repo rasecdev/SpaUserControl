@@ -11,8 +11,14 @@ namespace SpaUserControl.Infraestructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private SpaUserControlContext _context = new SpaUserControlContext();
+        private SpaUserControlContext _context;
 
+        //Injeção de Depedência
+        public UserRepository(SpaUserControlContext context)
+        {
+            this._context = context;
+        }
+        //pattern and pratice
         public User Get(Guid id)
         {
             return _context.Users.Where(x => x.Id == id).FirstOrDefault();
