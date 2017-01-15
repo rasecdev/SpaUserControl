@@ -44,6 +44,10 @@
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpaUserControl.Common\SpaUserControl.Common.csproj">
+      <Project>{bdb9b61e-80a6-4999-95c7-6b8b28cbb65e}</Project>
+      <Name>SpaUserControl.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpaUserControl.Domain\SpaUserControl.Domain.csproj">
       <Project>{432f9d02-5bb4-4acb-abb2-33c425de9183}</Project>
       <Name>SpaUserControl.Domain</Name>
