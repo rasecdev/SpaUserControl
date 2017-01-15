@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Startup", "SpaUserControl.Startup\SpaUserControl.Startup.csproj", "{F69EBFFF-BA44-4D25-A47B-E0142A6A82A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaUserControl.Business", "SpaUserControl.Business\SpaUserControl.Business.csproj", "{40FD5B69-03B1-4426-827E-047841BF6FA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F69EBFFF-BA44-4D25-A47B-E0142A6A82A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F69EBFFF-BA44-4D25-A47B-E0142A6A82A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F69EBFFF-BA44-4D25-A47B-E0142A6A82A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FD5B69-03B1-4426-827E-047841BF6FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FD5B69-03B1-4426-827E-047841BF6FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FD5B69-03B1-4426-827E-047841BF6FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FD5B69-03B1-4426-827E-047841BF6FA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
