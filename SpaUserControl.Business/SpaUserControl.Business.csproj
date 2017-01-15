@@ -43,6 +43,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaUserControl.Domain\SpaUserControl.Domain.csproj">
+      <Project>{432f9d02-5bb4-4acb-abb2-33c425de9183}</Project>
+      <Name>SpaUserControl.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaUserControl.Infraestructure\SpaUserControl.Infraestructure.csproj">
+      <Project>{6077bfca-5c58-4114-95d2-7249977d148a}</Project>
+      <Name>SpaUserControl.Infraestructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
