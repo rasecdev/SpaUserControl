@@ -21,17 +21,17 @@ namespace ConsoleApplication1
             user.SetPassword("andersoncesar", "andersoncesar");
             user.Validate();
 
-            using(IUserRepository userRep = new UserRepository())
-            {
-                userRep.Create(user);
+            //using(IUserRepository userRep = new UserRepository())
+            //{
+            //    userRep.Create(user);
 
-            }
+            //}
 
-            using (IUserRepository userRep = new UserRepository())
-            {
-                var usr = userRep.Get("anderson@anderson.com.br");
-                Console.WriteLine(usr.Email);
-            }
+            //using (IUserRepository userRep = new UserRepository())
+            //{
+            //    var usr = userRep.Get("anderson@anderson.com.br");
+            //    Console.WriteLine(usr.Email);
+            //}
 
         }
     }

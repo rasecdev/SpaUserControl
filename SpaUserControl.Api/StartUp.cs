@@ -32,5 +32,6 @@ namespace SpaUserControl.Api
                 defaults: new { id = RouteParameter.Optional }
              );
 
+        }
     }
 }

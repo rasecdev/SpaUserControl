@@ -42,7 +42,7 @@ namespace SpaUserControl.Domain.Models
             AssertionConcern.AssertArgumentNotNull(password, Errors.InvalidPassword);
             AssertionConcern.AssertArgumentNotNull(confirmPassword, Errors.InvalidPasswordConfirmation);
 
-            AssertionConcern.AssertArgumentEquals(password, confirmPassword, Errors.PasswordDoNotMatch);
+            AssertionConcern.AssertArgumentEquals(password, confirmPassword, Errors.PasswordDoesNotMatch);
 
             AssertionConcern.AssertArgumentLength(password, 6, 20, Errors.InvalidPassword);
 
