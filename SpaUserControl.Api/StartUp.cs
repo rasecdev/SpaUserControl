@@ -1,7 +1,10 @@
-﻿using Owin;
+﻿using Microsoft.Practices.Unity;
+using Owin;
+using SpaUserControl.Api.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using SpaUserControl.Startup;
 using System.Web;
 using System.Web.Http;
 
@@ -14,7 +17,12 @@ namespace SpaUserControl.Api
         {
             HttpConfiguration config = new HttpConfiguration();
 
-            ConfigureWebApi(config);
+            //Resolução da Dependency Injector.
+            var container = new UnityContainer();
+            DependecyResolver.Resolve(container);
+            config.DependencyResolver = new UnityResolver(container);
+
+            ConfigureWebApi(config);            
 
             //A aplicação é pública AllowAll.
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
